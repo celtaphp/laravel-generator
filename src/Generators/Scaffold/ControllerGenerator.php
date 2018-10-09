@@ -80,7 +80,7 @@ class ControllerGenerator extends BaseGenerator
 
         $fileName = $this->commandData->modelName.'DataTable.php';
 
-        $fields = implode(','.infy_nl_tab(1, 3), $headerFields);
+        $fields = implode("=>['title'=>__('nome_do_lang.do_campo')],".infy_nl_tab(1, 3), $headerFields);
 
         $templateData = str_replace('$DATATABLE_COLUMNS$', $fields, $templateData);
 

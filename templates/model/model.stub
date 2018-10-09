@@ -2,11 +2,13 @@
 
 namespace $NAMESPACE_MODEL$;
 
+use App\Traits\Uuids;
 use $NAMESPACE_MODEL_EXTEND$ as Model;
 $SOFT_DELETE_IMPORT$
 $DOCS$
 class $MODEL_NAME$ extends Model
 {
+    use Uuids;
 $SOFT_DELETE$
     public $table = '$TABLE_NAME$';
     $TIMESTAMPS$
